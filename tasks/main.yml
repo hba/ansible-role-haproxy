@@ -33,3 +33,7 @@
 - name: Ensure HAProxy is started and enabled on boot.
   become: true
   service: name=haproxy state=started enabled=yes
+
+- name: Validate foo bar
+  ansible.builtin.debug:
+    var: phpinfo_foo
